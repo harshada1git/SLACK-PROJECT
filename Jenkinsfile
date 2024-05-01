@@ -19,8 +19,8 @@ parameters {
                 sh 'cp target/SLACK-PROJECT.war /home/harshada/Documents/DevOps_software/apache-tomcat-9.0.88'
                         }}
 stage('slack'){
-
 steps { 
+slackSend baseUrl: 'https://hooks.slack.com/services/', channel: 'slack-channel', color: 'good', message: 'I love my Nagpur', teamDomain: 'student', tokenCredentialId: '96f15b3f-4212-4530-9bc3-3d8794d797be', username: 'harshada' }}
 
 
 }}
